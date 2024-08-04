@@ -13,17 +13,17 @@
         display: flex;
         align-items: center;
         gap: 50px;
-    .links {
-        display: flex;
-        gap: 50px;
+        .links {
+            display: flex;
+            gap: 50px;
 
-        @include md {
-            gap: 40px;
+            @include md {
+                gap: 40px;
+            }
+            @include sm {
+                display: none;
+            }
         }
-        @include sm {
-            display: none;
-        }
-    }
         .brand {
             display: flex;
             align-items: center;
@@ -35,7 +35,7 @@
             span {
                 font-weight: bold;
                 margin: 0 5px;
-                font-size: 20px ;
+                font-size: 20px;
                 @include md {
                     display: none;
                 }
@@ -57,7 +57,7 @@
             height: 100%;
             gap: 50px;
             background-color: #fcf5f3;
-            
+            z-index: 99;
             @include md {
                 margin-left: 100px;
                 gap: 10px;
@@ -76,11 +76,9 @@
             }
         }
 
-
-
         // user profile styles
 
-        .profile {
+        .userProfile {
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -88,6 +86,7 @@
             gap: 50px;
             background-color: #fcf5f3;
             padding: 0 10px;
+            z-index: 99;
             @include sm {
                 justify-content: center;
                 background-color: transparent;
@@ -105,14 +104,12 @@
                     border-radius: 50%;
                     object-fit: cover;
                 }
-
             }
 
             .profile {
                 background-color: rgb(255, 213, 0);
-                height: 30px;
                 position: relative;
-                padding: 20px;
+                padding: 10px 20px;
                 @include sm {
                     display: none;
                 }
@@ -121,7 +118,7 @@
                     position: absolute;
                     top: -8px;
                     right: -8px;
-                    padding:0 4px;
+                    padding: 0 4px;
                     border-radius: 50%;
                 }
             }
@@ -137,11 +134,10 @@
             img {
                 position: absolute;
                 top: 30px;
-                right:20px;
+                right: 20px;
                 z-index: 1;
                 width: 35px;
                 cursor: pointer;
-
             }
 
             .sideLinks {
@@ -156,12 +152,12 @@
                 align-items: center;
                 row-gap: 50px;
                 background-color: black;
-                transition:all 1s ease;
-    
+                transition: all 1s ease;
+
                 &.active {
                     right: 0%;
                 }
-                a{
+                a {
                     display: flex;
                     color: white;
                     font-size: 25px;

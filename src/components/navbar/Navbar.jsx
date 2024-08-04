@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <div className="right">
                 {user ? (
-                    <div className="profile">
+                    <div className="userProfile">
                         <Link to="/signIn" className="user">
                             <img src="https://th.bing.com/th/id/OIP.4llqBTcDP9m3BZTwOxIbwwHaHa?rs=1&pid=ImgDetMain" alt="user" />
                             <p>John</p>

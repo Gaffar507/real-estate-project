@@ -3,10 +3,10 @@
 .listPage {
     display: flex;
     height: 100%;
-    
+
     @include md {
         flex-direction: column;
-        overflow-y:scroll;
+        overflow-y: scroll;
         gap: 50px;
         padding-bottom: 20px;
     }
