@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './responsive.scss';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+// color selection
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    overflow: hidden;
+    @include sm {
+        overflow-y: scroll;
+    }
+}
+
+// other common style 
+    .btn {
+        background-color: #fece51;
+        border: none;
+        cursor: pointer;
+        transition:0.4s ease;
+    }
+
+    // img {
+
+    // }
+
+    a {
+        color: inherit;
+        font-weight: 500;
+        font-size: 20px;
+        transition:all 0.03s ease-in;
+
+        &:hover{
+            scale: 1.05;
+        }
+    }
+
+    // section {
+
+    // }

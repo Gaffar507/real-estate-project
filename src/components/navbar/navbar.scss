@@ -1,0 +1,172 @@
+@import '../../responsive.scss';
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // left side style start
+    .left {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    .links {
+        display: flex;
+        gap: 50px;
+
+        @include md {
+            gap: 40px;
+        }
+        @include sm {
+            display: none;
+        }
+    }
+        .brand {
+            display: flex;
+            align-items: center;
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+            span {
+                font-weight: bold;
+                margin: 0 5px;
+                font-size: 20px ;
+                @include md {
+                    display: none;
+                }
+                @include sm {
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    // right side style start
+    .right {
+        flex: 2;
+        height: 100%;
+        .signProfile {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            gap: 50px;
+            background-color: #fcf5f3;
+            
+            @include md {
+                margin-left: 100px;
+                gap: 10px;
+            }
+            @include sm {
+                background-color: transparent;
+            }
+            a {
+                @include sm {
+                    display: none;
+                }
+            }
+            .btn {
+                padding: 6px 10px;
+                margin-right: 16px;
+            }
+        }
+
+
+
+        // user profile styles
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            gap: 50px;
+            background-color: #fcf5f3;
+            padding: 0 10px;
+            @include sm {
+                justify-content: center;
+                background-color: transparent;
+            }
+            .user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                animation: none;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .profile {
+                background-color: rgb(255, 213, 0);
+                height: 30px;
+                position: relative;
+                padding: 20px;
+                @include sm {
+                    display: none;
+                }
+                .notification {
+                    background-color: red;
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    padding:0 4px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .menuIcon {
+        display: none;
+
+        @include sm {
+            display: initial;
+            z-index: 99;
+            img {
+                position: absolute;
+                top: 30px;
+                right:20px;
+                z-index: 1;
+                width: 35px;
+                cursor: pointer;
+
+            }
+
+            .sideLinks {
+                position: absolute;
+                top: 0;
+                right: -50%;
+                height: 100vh;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 50px;
+                background-color: black;
+                transition:all 1s ease;
+    
+                &.active {
+                    right: 0%;
+                }
+                a{
+                    display: flex;
+                    color: white;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

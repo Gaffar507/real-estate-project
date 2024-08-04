@@ -1,0 +1,97 @@
+@import '../../responsive.scss';
+
+.slider {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    gap: 20px;
+    @include sm {
+        gap: 10px;
+    }
+    // full slider styles
+    .fullSlider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background-color: black;
+        z-index: 99;
+
+        .arrow {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 50px;
+                transition: all 0.3s ease;
+                @include md {
+                    width: 30px;
+                }
+                @include sm {
+                    width: 20px;
+                }
+                &.rightArrow {
+                    transform: rotate(180deg);
+                }
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+
+        .imgContainer {
+            flex:10;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: none;
+            @include md {
+                height: 60%;
+                object-fit: contain;
+            }
+            @include sm {
+                height: 30%;
+            }
+        }
+
+        .cancel {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .bigImg {
+        flex: 3;
+    }
+    .smallImg {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        img {
+            height: 85px;
+            object-fit: cover;
+        }
+    }
+}
