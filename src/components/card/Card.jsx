@@ -6,7 +6,7 @@ const Card = ({ id, img, title, price, address, bedroom, bathroom, latitude, lon
     return (
         <div className="card">
             <div className="cardImg">
-                <Link to={`/${id}`}>
+                <Link to={`${id}`}>
                     <img src={img} alt="card" />
                 </Link>
             </div>
