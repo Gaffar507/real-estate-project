@@ -3,7 +3,7 @@
 .listPage {
     display: flex;
     height: 100%;
-
+    padding-bottom: 10px;
     @include md {
         flex-direction: column;
         overflow-y: scroll;

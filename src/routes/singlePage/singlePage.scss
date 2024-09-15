@@ -3,6 +3,7 @@
 .singlePageContainer {
     display: flex;
     height: 100%;
+    overflow-y: scroll;
 
     @include md {
         flex-direction: column;
@@ -193,6 +194,12 @@
                 display: flex;
                 justify-content: space-between;
                 background-color: transparent;
+                padding-bottom: 50px;
+
+                @include md {
+                    padding-bottom: 20px;
+                }
+
                 .message {
                     display: flex;
                     align-items: center;
